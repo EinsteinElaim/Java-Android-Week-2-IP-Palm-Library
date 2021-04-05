@@ -2,6 +2,7 @@ package com.moringaschool.palmlibrary;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -27,7 +28,7 @@ public class SplashScreen extends AppCompatActivity {
 
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+//        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
 
         email = (EditText)findViewById(R.id.email);
         password = (EditText)findViewById(R.id.password);

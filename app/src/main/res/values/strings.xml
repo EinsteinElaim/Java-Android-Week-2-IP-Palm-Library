@@ -12,4 +12,10 @@
     <string name="account">Account</string>
     <string name="saved">Saved</string>
     <string name="about">About</string>
+    <string name="title_activity_search_results">SearchResultsActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
 </resources>

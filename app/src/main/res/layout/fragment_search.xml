@@ -3,12 +3,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".SearchFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_search_fragment" />
+
+
+
+        <LinearLayout
+            android:id="@+id/layoutSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextSearchLibrary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:padding="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:hint="Type book title/genre to search here"
+                android:textColor="@color/black"/>
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/buttonSearchLibrary"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:background="@drawable/background"-->
+<!--                android:src="@drawable/ic_search" />-->
+
+            <Button
+                android:id="@+id/buttonSearchLibrary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search"/>
+
+
+
+        </LinearLayout>
+
 
 </FrameLayout>
