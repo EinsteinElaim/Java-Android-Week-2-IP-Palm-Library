@@ -32,6 +32,9 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    buildTypes.each {
+        it.buildConfigField 'String', 'key', key
+    }
 
 }
 
@@ -52,4 +55,9 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'com.android.support:design:27.0.2'
     compileOnly 'com.google.android.wearable:wearable:2.8.1'
+
+
+//    Adding retrofit to manage HTTP requests for out api
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
 }

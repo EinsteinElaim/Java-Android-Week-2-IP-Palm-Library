@@ -1,64 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/background">
 
-<!--    <TextView-->
-<!--        android:id="@+id/searchResultText"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="20sp"-->
-<!--        android:layout_marginStart="20dp"-->
-<!--        android:layout_marginEnd="20dp"-->
-<!--        android:textAlignment="center"/>-->
 
-    <LinearLayout
-        android:id="@+id/layoutResults"
-        android:layout_width="match_parent"
+
+    <TextView
+        android:id="@+id/textViewSearchResults"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:orientation="vertical">
+        android:layout_marginTop="10dp"
+        android:text="Records Found :"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"/>
 
+    <ListView
+        android:id="@+id/listViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:textColor="@color/white"/>
 
-
-
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/listViewTitle"
-            android:layout_marginTop="15sp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"/>
-
-
-<!--        <ListView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:id="@+id/listViewGenre"-->
-<!--            android:layout_marginTop="15sp"-->
-<!--            android:layout_marginStart="10dp"-->
-<!--            android:layout_marginEnd="10dp"/>-->
-
-
-
-        <!--        <Button-->
-        <!--            android:id="@+id/buttonBackToSearch"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="Search"-->
-        <!--            android:layout_gravity="center"-->
-        <!--            android:layout_marginTop="20dp"-->
-        <!--            android:background="@drawable/background" />-->
-
-
-<!--        <Button-->
-<!--            android:id="@+id/backToSearch"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Back"/>-->
-
-
-
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

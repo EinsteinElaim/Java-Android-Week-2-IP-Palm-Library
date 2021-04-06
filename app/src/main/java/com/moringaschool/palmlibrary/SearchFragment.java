@@ -17,7 +17,6 @@ import android.widget.ImageButton;
 
 public class SearchFragment extends Fragment {
     Intent intent;
-    String search;
     View view;
 
     @Nullable
@@ -27,15 +26,15 @@ public class SearchFragment extends Fragment {
 
         view = inflater.inflate(R.layout.fragment_search, container, false);
         EditText searchText = (EditText) view.findViewById(R.id.editTextSearchLibrary);
-        search = searchText.getText().toString();
+        String search = searchText.getText().toString();
         Button searchLibrary = (Button) view.findViewById(R.id.buttonSearchLibrary);
 
         searchLibrary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getActivity(), SearchResultsActivity.class);
-                i.putExtra("searchText", search);
-                Log.d("SearchBtnClicked", search);
+                Intent i = new Intent(SearchFragment.super.getActivity(), SearchResultsActivity.class);
+//                i.putExtra("searchText", search);
+//                Log.d("SearchBtnClicked", search);
                 startActivity(i);
             }
         });

@@ -36,11 +36,11 @@ public class SearchResultsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_results);
 
-//        mTextViewSearchResultsTitle = (TextView) findViewById(R.id.searchResultText);
 
-
+        mTextViewSearchResultsTitle = (TextView) findViewById(R.id.textViewSearchResults);
         mListViewTitle = (ListView) findViewById(R.id.listViewTitle);
 //        mListViewGenre = (ListView) findViewById(R.id.listViewGenre);
+
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, titles);
         mListViewTitle.setAdapter(adapter);
@@ -53,23 +53,13 @@ public class SearchResultsActivity extends AppCompatActivity {
             }
         });
 
-//        ArrayAdapter adapter1 = new ArrayAdapter(this, android.R.layout.simple_list_item_2, genres);
-//        mListViewGenre.setAdapter(adapter1);
-//
-//        mListViewGenre.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                String genre = ((TextView) view).getText().toString();
-//                Toast.makeText(SearchResultsActivity.this, genre, Toast.LENGTH_LONG).show();
-//            }
-//        });
 
 
-
-        Intent intent = getIntent();
-        String searchedText = intent.getExtras().getString("searchText");
-        Log.d("IntentExtraSearchResultCaught", searchedText);
+//        Intent intent = getIntent();
+//        String searchedText = intent.getExtras().getString("searchText");
+//        Log.d("IntentExtraSearchResultCaught", searchedText);
 //        mTextViewSearchResultsTitle.setText(searchedText);
+
 
     }
 }
