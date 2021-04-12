@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.moringaschool.palmlibrary.R;
 
@@ -33,12 +34,15 @@ public class SearchFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_search, container, false);
         Button button = (Button) rootView.findViewById(R.id.buttonSearchLibrary);
+        EditText editTextSearchWord = (EditText) rootView.findViewById(R.id.editTextSearchLibrary);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), BookListActivity.class);
-                ((MainActivity) getActivity()).startActivity(intent);
+                String searchText = editTextSearchWord.getText().toString();
+                intent.putExtra("searchText", searchText);
+                getActivity().startActivity(intent);
             }
         });
 

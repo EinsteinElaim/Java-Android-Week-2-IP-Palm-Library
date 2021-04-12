@@ -2,6 +2,7 @@ package com.moringaschool.palmlibrary.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -27,14 +28,14 @@ public class BookListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_list);
 
-//        getData = (Button) findViewById(R.id.getData);
-
+        Intent intent = getIntent();
+        String searchText = intent.getExtras().getString("searchText");
 
         Methods client = RetrofitClient.getClient();
 
         Log.d(TAG, "In the On create method");
 
-        Call<Model> call = client.getItems("python");
+        Call<Model> call = client.getItems(searchText);
 
 
         call.enqueue(new Callback<Model>() {
@@ -55,14 +56,5 @@ public class BookListActivity extends AppCompatActivity {
             }
         });
 
-
-//        getData.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-////                Call<Model> call = (Call<Model>) client.getItems("python");
-//
-//
-//            }
-//        });
     }
 }
