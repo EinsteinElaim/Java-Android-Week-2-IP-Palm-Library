@@ -41,7 +41,7 @@ public class SearchFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), BookListActivity.class);
                 String searchText = editTextSearchWord.getText().toString();
-                intent.putExtra("searchText", searchText);
+                intent.putExtra("searchBook", searchText);
                 getActivity().startActivity(intent);
             }
         });

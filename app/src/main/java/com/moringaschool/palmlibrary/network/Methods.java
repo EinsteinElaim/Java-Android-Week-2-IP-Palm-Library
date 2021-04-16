@@ -10,6 +10,6 @@ public interface Methods {
 
     @GET("volumes")
     Call<Model> getItems(
-        @Query("q") String searchText
+        @Query("q") String searchBook
     );
 }
